@@ -165,7 +165,7 @@ namespace i4optioncore.Repositories
                 else if (type == "whatsapp")
                 {
                     //await commonBL.SendSms(user.Mobile, otp);
-                    await commonBL.SendWhatsapp($"+91{user.Mobile}", "code", user.FirstName, "", "", "", otp);
+                    await commonBL.SendWhatsapp($"+91{user.Mobile}", "otp2", user.FirstName, "", "", "", otp);
                     //twilioBL.SendSMS("Your OTP for validation on i4option.com: " + otp, user.Mobile);
                 }
                 else if (type == "sms")
