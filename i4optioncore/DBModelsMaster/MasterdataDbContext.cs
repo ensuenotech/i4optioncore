@@ -191,10 +191,6 @@ public partial class MasterdataDbContext : DbContext
 
     public virtual DbSet<_52weekHighLow> _52weekHighLows { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("data source=13.202.249.163;initial catalog=masterdata_db;Persist Security Info=True;User ID=sa;Password='io#123321';App=EntityFramework;MultipleActiveResultSets=true;TrustServerCertificate=true");
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Cashflow>(entity =>
